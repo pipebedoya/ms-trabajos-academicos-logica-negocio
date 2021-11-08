@@ -6,7 +6,7 @@ import {Entity, model, property} from '@loopback/repository';
           name: 'fk_res_eva_id_evaluacionsolicitud',
           entity: 'EvaluaSolicitud',
           entityKey: 'id',
-          foreignKey: 'id_evaluasolicitud'
+          foreignKey: 'id_evaluacionsolicitud'
           },
            fk_res_eva_id_estado: {
           name: 'fk_res_eva_id_estado',
