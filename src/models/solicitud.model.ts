@@ -81,6 +81,11 @@ export class Solicitud extends Entity {
   })
   id_tiposolicitud?: number;
 
+  @property({
+    type: 'number',
+  })
+  id_areainvestigacion?: number;
+
   @hasMany(() => Proponente, {through: {model: () => ProponenteXSolicitud, keyFrom: 'id_solicitud', keyTo: 'id_proponente'}})
   proponentes: Proponente[];
 
@@ -89,11 +94,6 @@ export class Solicitud extends Entity {
 
   @hasMany(() => TipoComite, {through: {model: () => ComiteXSolicitud, keyFrom: 'id_solicitud', keyTo: 'id_tipocomite'}})
   tipoComites: TipoComite[];
-
-  @property({
-    type: 'number',
-  })
-  id_areainvestigacion?: number;
 
   constructor(data?: Partial<Solicitud>) {
     super(data);
