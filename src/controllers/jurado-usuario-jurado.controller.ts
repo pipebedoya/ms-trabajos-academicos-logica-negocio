@@ -107,4 +107,5 @@ export class JuradoUsuarioJuradoController {
   ): Promise<Count> {
     return this.juradoRepository.tiene(id).delete(where);
   }
+  
 }
